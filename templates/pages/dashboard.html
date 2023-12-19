@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styling %}
+    <link rel="stylesheet" href="{% static 'webapp/style/dashboard.css' %}" >
+{% endblock styling %}
+
+{% block content %}
+        <div class="wrapper">
+        <div class="container-1">
+            <span class="text">Pending <br>Task</span>
+                <div class="container-item">
+                    <i class="fas fa-solid fa-clock-rotate-left"></i>
+                    <span class="num" data-val="124">000</span>
+                </div>
+        </div>
+
+        <div class="container-2">
+            <span class="text">Active Application</span>
+            <div class="container-item">
+                <i class="fas fa-solid fa-file-invoice"></i>
+                <span class="num" data-val="15">000</span>
+            </div>
+        </div>
+
+        <div class="container-3">
+            <span class="text">Past <br>Application</span>
+            <div class="container-item">
+                <i class="fas fa-solid fa-envelope-open-text"></i>
+                <span class="num" data-val="5">000</span>
+            </div>
+        </div>
+    </div>
+    </section>
+{% endblock content %}
+
+{% block script %}
+    <script src="{% static 'webapp/script/dashboard.js' %} " ></script>
+{% endblock script %}

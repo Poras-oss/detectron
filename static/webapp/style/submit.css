@@ -1,0 +1,30 @@
+.submitted{
+    position: relative;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.ok{
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 70%;
+    color: #030023;
+    /* justify-content: space-between; */
+}
+.ok .fas{
+    font-size: 10rem;
+    color: #030023;
+}
+.thankyou{
+    width: 100%;
+}
+.thankyou h5{
+    color: #565656;
+    font: 16px;
+}
+.thankyou p{
+    color: #7E7E7E;
+    font-size: 15px;
+    text-align: justify;
+}

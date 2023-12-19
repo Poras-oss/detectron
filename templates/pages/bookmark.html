@@ -1,0 +1,166 @@
+{% extends 'base.html' %} {% load static %} {% block styling %}
+<link rel="stylesheet" href="{% static 'webapp/style/bookmark.css' %}" />
+{% endblock styling %} {% block content %}
+<section class="main">
+  <section class="reports">
+    <div class="report-details" style="height: 550px">
+      <table class="table-1">
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Alert Type</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Incident type</th>
+            <th>Image and Videos Of the Incident</th>
+            <th>Suspected Information</th>
+            <th>Remarks</th>
+            <th>Description</th>
+            <th>Supporting Statement</th>
+            <th>Status</th>
+            <th>verification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>A Div</td>
+            <td>2/4/2023</td>
+            <td>2:30pm</td>
+            <td>234, street</td>
+            <td>Street Fight</td>
+            <td>
+              <img src="{% static 'webapp/public/street fight.png' %}" alt="" />
+              <img src="{% static 'webapp/public/street fight.png' %}" alt="" />
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>User:- <br />Lo:- <br />Ops:- <br />A&F:-</td>
+            <td>-</td>
+            <td>Stage 1/5 pending user view</td>
+            <td>verified <br />unverified</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="dropdown-1">
+        <input type="checkbox" id="dropdown" />
+        <label class="dropdown__face" for="dropdown">
+          <div class="dropdown__text">Show More</div>
+          <div class="dropdown__arrow"></div>
+        </label>
+        <ul class="dropdown__items">
+          <li>Edit</li>
+          <li>View Details</li>
+          <li>Delete</li>
+          <li>Unbookmark</li>
+        </ul>
+      </div>
+      <table class="table-2">
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Alert Type</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Incident type</th>
+            <th>Image and Videos Of the Incident</th>
+            <th>Suspected Information</th>
+            <th>Remarks</th>
+            <th>Description</th>
+            <th>Supporting Statement</th>
+            <th>Status</th>
+            <th>verification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>02</td>
+            <td>A Div</td>
+            <td>2/4/2023</td>
+            <td>2:30pm</td>
+            <td>234, street</td>
+            <td>Street Fight</td>
+            <td>
+              <img src="{% static 'webapp/public/street fight.png' %}" alt="" />
+              <img src="{% static 'webapp/public/street fight.png' %}" alt="" />
+            </td>
+            <td>-</td>
+            <td>User:- <br />Lo:- <br />Ops:- <br />A&F:-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Stage 1/5 pending user view</td>
+            <td>verified <br />unverified</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="dropdown-1">
+        <input type="checkbox" id="dropdown" />
+        <label class="dropdown__face" for="dropdown">
+          <div class="dropdown__text">Show More</div>
+          <div class="dropdown__arrow"></div>
+        </label>
+        <ul class="dropdown__items">
+          <li>Edit</li>
+          <li>View Details</li>
+          <li>Delete</li>
+          <li>Unbookmark</li>
+        </ul>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>S.No.</th>
+            <th>Alert Type</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            <th>Incident type</th>
+            <th>Image and Videos Of the Incident</th>
+            <th>Suspected Information</th>
+            <th>Remarks</th>
+            <th>Description</th>
+            <th>Supporting Statement</th>
+            <th>Status</th>
+            <th>verification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>03</td>
+            <td>A Div</td>
+            <td>2/4/2023</td>
+            <td>2:30pm</td>
+            <td>234, street</td>
+            <td>Street Fight</td>
+            <td>
+              <img src="{% static 'webapp/public/street fight.png' %}" alt="" />
+              <img src="{% static 'webapp/public/street fight.png' %}" alt="" />
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>User:- <br />Lo:- <br />Ops:- <br />A&F:-</td>
+            <td>-</td>
+            <td>Stage 1/5 pending user view</td>
+            <td>verified <br />unverified</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="dropdown-1">
+        <input type="checkbox" id="dropdown" />
+        <label class="dropdown__face" for="dropdown">
+          <div class="dropdown__text">Show More</div>
+          <div class="dropdown__arrow"></div>
+        </label>
+        <ul class="dropdown__items">
+          <li>Edit</li>
+          <li>View Details</li>
+          <li>Delete</li>
+          <li>Unbookmark</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+{% endblock content %} {% block script %} {% endblock script %}

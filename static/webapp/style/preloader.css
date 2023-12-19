@@ -1,0 +1,12 @@
+/* body{
+    background-color: black;
+} */
+#preloader{
+    /* filter: blur(2px); */
+    background: #0b3d52 url(https://gifdb.com/images/high/animated-detective-searching-for-clues-mg87xc9ss1roriu9.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}

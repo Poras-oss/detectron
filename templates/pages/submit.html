@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'webapp/style/nav.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'webapp/public/logo@2x.ico' %}"
+    />
+    <link rel="stylesheet" href="{% static 'webapp/style/preloader.css' %}" />
+    <title>DETECTRON</title>
+    <link rel="stylesheet" href="{% static 'webapp/style/submit.css' %}" />
+  </head>
+  <body>
+    <!-- <div id="preloader"></div> -->
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="main.html"
+            ><img src="{% static 'webapp/public/logo@2x.png' %}" alt=""
+          /></a>
+        </div>
+        <ul class="link">
+          <li>
+            <a href="dashboard.html"><b>DASHBOARD</b></a>
+          </li>
+          <li>
+            <a href=""><b>FAQ</b></a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps"><b>MAP</b></a>
+          </li>
+          <li>
+            <a href=""><b>NOTIFICATION</b></a>
+          </li>
+          <li>
+            <a href=""><b>NEWS</b></a>
+          </li>
+        </ul>
+        <div class="profile">
+          <i class="fa-solid fa-user" style="color: #000000d5"></i>
+        </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <li><a href="{% url 'dashboard' %}">DASHBOARD</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="https://www.google.com/maps">MAP</a></li>
+        <li><a href="">NOTIFICATION</a></li>
+        <li><a href="">NEWS</a></li>
+      </div>
+    </header>
+    <div class="container">
+      <div class="sidenav">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="sidenav-item">
+                <i class="fas fa-solid fa-sliders"></i>
+                <span class="nav-item">Info Panel</span>
+              </a>
+            </li>
+            <li>
+              <a href="view-report.html" class="sidenav-item">
+                <i class="fas fa-regular fa-file-lines"></i>
+                <span class="nav-item">View Report</span>
+              </a>
+            </li>
+            <li>
+              <a href="bookmark.html" class="sidenav-item">
+                <i class="fas fa-regular fa-bookmark"></i>
+                <span class="nav-item">Bookmarked</span>
+              </a>
+            </li>
+            <!-- <li>
+                        <a href="" class="sidenav-item">
+                            <i class="fas fa-regular fa-file-zipper"></i>
+                            <span class="nav-item">Incident Log</span>
+                        </a>
+                    </li> -->
+            <li>
+              <a href="analylitics.html" class="sidenav-item">
+                <i class="fas fa-solid fa-magnifying-glass-chart"></i>
+                <span class="nav-item">Analytics and Insights</span>
+              </a>
+            </li>
+            <li>
+              <a href="casehistory.html" class="sidenav-item">
+                <i class="fas fa-solid fa-clock-rotate-left"></i>
+                <span class="nav-item">Case History</span>
+              </a>
+            </li>
+            <li>
+              <a href="application.html" class="sidenav-item">
+                <i class="fas fa-solid fa-file-invoice"></i>
+                <span class="nav-item">Application</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="sidenav-item">
+                <div class="on"></div>
+                <i class="fas fa-solid fa-envelope-open-text"></i>
+                <span class="nav-item">Citizen Reporting</span>
+              </a>
+            </li>
+            <li>
+              <a href="" class="sidenav-item">
+                <i class="fas fa-regular fa-id-badge"></i>
+                <span class="nav-item">My Profile</span>
+              </a>
+            </li>
+            <!-- <li>
+                        <a href="" class="sidenav-item">
+                            <i class="fas fa-solid fa-magnifying-glass"></i>
+                            <span class="nav-item">Profile Search</span>
+                        </a>
+                    </li> -->
+            <!-- <li>
+                        <a href="" class="sidenav-item">
+                            <i class="fas fa-solid fa-gear"></i>
+                            <span class="nav-item">Setting</span>
+                        </a>
+                    </li> -->
+            <li>
+              <a href="/index.html" class="sidenav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log-Out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="submitted">
+        <div class="ok">
+          <i class="fas fa-solid fa-circle-check"></i>
+          <h1>Successfully Submitted</h1>
+        </div>
+        <div class="thankyou">
+          <h5>Thankyou you for submitting your report!</h5>
+          <p>
+            Your incident report has been successfully received. We appreciate
+            your contribution to maintaining community safety. Our team will
+            carefully review the information provided and take appropriate
+            action as necessary. Please note that due to the volume of reports
+            we receive, we may not be able to provide individual updates on the
+            progress of your report. Rest assured that your report will be
+            handled with utmost priority. Thank you for your cooperation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

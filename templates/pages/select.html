@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'webapp/style/nav.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'webapp/public/logo@2x.ico' %}"
+    />
+    <link rel="stylesheet" href="{% static 'webapp/style/preloader.css' %}" />
+    <title>DETECTRON</title>
+    <link rel="stylesheet" href="{% static 'webapp/style/select.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="static/webapp/public/logo1@2x.png" alt="" />
+        </div>
+        <ul class="link">
+          <li><a href="{% url 'select' %}">DASHBOARD</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="https://www.google.com/maps">MAP</a></li>
+          <li><a href="">NOTIFICATION</a></li>
+          <li><a href="">NEWS</a></li>
+        </ul>
+        <div class="profile">
+          <i class="fa-solid fa-user" style="color: #ffffff"></i>
+        </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <li><a href="">DASHBOARD</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="https://www.google.com/maps">MAP</a></li>
+        <li><a href="">NOTIFICATION</a></li>
+        <li><a href="">NEWS</a></li>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="ask">
+        <h2>Login If You Are</h2>
+      </div>
+      <div class="login">
+        <div class="authority">
+          <h2>Authority</h2>
+          <a href="{% url 'login' %}">Login with your government credentials</a>
+        </div>
+        <h2>OR</h2>
+        <div class="citizen">
+          <h2>Citizen?</h2>
+          <a href="{% url 'citizen' %}">Report or track your FIR here</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DETECTRON</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../static/webapp/style/login.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../static/webapp/public/logo@2x.ico"
+    />
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="login-form">
+        <div class="login-header">
+          <img src="../static/webapp/public/logo@2x.png" alt="" class="logo" />
+        </div>
+        <div class="login-container">
+          <header>LOGIN</header>
+          <form action="{% url 'main' %}">
+            <div class="field">
+              <span class="fa fa-user"></span>
+              <input type="text" required placeholder="ENTER USER-ID" />
+            </div>
+            <div class="field space">
+              <span class="fa fa-lock"></span>
+              <input
+                type="password"
+                class="pass-key"
+                required
+                placeholder="PASSWORD"
+              />
+              <span class="show">SHOW</span>
+            </div>
+            <div class="pass">
+              <a href="#">Forgot Password</a>
+            </div>
+            <div class="button">
+              <input type="submit" value="login" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="notification-container">
+        <div class="notification-bar">
+          <div class="notification-item">
+            <div class="notification-box">
+              <div class="notification-child"></div>
+              <div class="notification">
+                <div class="aug-parent">
+                  <b class="aug">AUG</b>
+                  <b class="b">18</b>
+                  <b class="b1">2022</b>
+                </div>
+                <div class="notification-content">
+                  The Police Warrant Card Application System is not available
+                  from 21 Nov 2020 (Sat) 6pm to 22 Nov 2020 (Sun) 6am due to
+                  scheduled
+                </div>
+              </div>
+            </div>
+            <div class="notification-box">
+              <div class="notification-child"></div>
+              <div class="notification">
+                <div class="nov-parent">
+                  <b class="aug">NOV</b>
+                  <b class="b">18</b>
+                  <b class="b1">2022</b>
+                </div>
+                <div class="notification-content">
+                  The Police Warrant Card Application System is not available
+                  from 21 Nov 2020 (Sat) 6pm to 22 Nov 2020 (Sun) 6am due to
+                  scheduled
+                </div>
+              </div>
+            </div>
+            <div class="notification-box">
+              <div class="notification-child"></div>
+              <div class="notification-2">
+                <div class="mar-parent">
+                  <b class="mar">MAR </b>
+                  <b class="b4">7</b>
+                  <b class="b5">2023</b>
+                </div>
+                <div class="notification-content">
+                  The Police Warrant Card Application System is not available
+                  from 21 Nov 2020 (Sat) 6pm to 22 Nov 2020 (Sun) 6am due to
+                  scheduled
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes-scrollb">
+            <div class="notes-scrollb-child"></div>
+          </div>
+        </div>
+      </div>
+      <div class="warning-container">
+        <div class="warning-header">
+          <a href=""><img src="warning.png" alt="" /></a>
+          <b class="heading">WARNING</b>
+        </div>
+        <div class="warning">
+          <p class="content">
+            This is a Ministry of Crime Affairs protected computer system. If
+            you are not authorised to access this system, DO NOT attempt to
+            log-in!
+          </p>
+          <p class="content">&nbsp;</p>
+          <p class="content">
+            Usage of this system, as well as access to all classified
+            information and personal data will be monitored.
+          </p>
+          <p class="content">&nbsp;</p>
+          <p class="content">
+            Any unauthorised access, modification or such attempt on this
+            protected system is an offence under the Computer Misuse &
+            Cybersecurity Act and liable disciplinary action and/or criminal
+            prosecution.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="static/webapp/script/login.js"></script>
+  </body>
+</html>

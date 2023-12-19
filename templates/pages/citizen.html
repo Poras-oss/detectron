@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'webapp/style/nav.css' %}" />
+    <link rel="stylesheet" href="{% static 'webapp/style/citizen.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'webapp/public/logo@2x.ico' %}"
+    />
+    <!-- <link rel="stylesheet" href="/style/preloader.css"> -->
+    <title>DETECTRON</title>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="main.html"
+            ><img src="{% static 'webapp/public/logo@2x.png' %}" alt=""
+          /></a>
+        </div>
+        <ul class="link">
+          <li>
+            <a href="{% url 'dashboard' %}"><b>DASHBOARD</b></a>
+          </li>
+          <li>
+            <a href=""><b>FAQ</b></a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps"><b>MAP</b></a>
+          </li>
+          <li>
+            <a href=""><b>NOTIFICATION</b></a>
+          </li>
+          <li>
+            <a href=""><b>NEWS</b></a>
+          </li>
+        </ul>
+        <div class="profile">
+          <i class="fa-solid fa-user" style="color: #000000d5"></i>
+        </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <li><a href="{% url 'dashboard' %}">DASHBOARD</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="https://www.google.com/maps">MAP</a></li>
+        <li><a href="">NOTIFICATION</a></li>
+        <li><a href="">NEWS</a></li>
+      </div>
+    </header>
+    
+      <div class="report">
+        <h3>CITIZEN REPORTING</h3>
+      <form method="post" action="{% url 'citizen_report' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container_1">
+          <div class="container_sub">
+            <li>
+              <div class="incident">
+                <label for="Incident-select" class="incident_label">Incident Type</label>
+                <br>
+                  <select name="incident" id="Incident-select" class="incident_type">
+                      <option value="">--Please choose an option--</option>
+                      <option value="Street Violence">Street Violence</option>
+                      <option value="Burglary">Burglary</option>
+                      <option value="Theft">Theft</option>
+                      <option value="Infiltration">Infiltration</option>
+                      <option value="Unauthorised access">Unauthorised access</option>
+                      <option value="Other">Other</option>
+                  </select>
+              </div>
+              <div class="location">
+                <p>Location</p>
+                <input type="text" name="location" />
+              </div>
+              <div class="date">
+                <p>Date and Time</p>
+                <input type="datetime-local" name="date" />
+              </div>
+            </li>
+            <div class="discription">
+              <p>Description</p>
+              <input type="text" name="description"/>
+            </div>
+            <br />
+            <br />
+            <div class="media">
+              <p>Media Upload</p>
+              <div class="file-upload">
+                <label for="upload" class="file-upload__label"
+                  >Click here to upload</label
+                >
+                <input
+                  id="upload"
+                  class="file-upload__input"
+                  type="file"
+                  name="file-upload"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_2">
+          <p>CONTACT-INFO</p>
+          <div class="info">
+            <li>
+              <div class="information">
+                <p>NAME</p>
+                <input type="text" name="name"/>
+              </div>
+              <div class="information">
+                <p>Email</p>
+                <input type="email" name="email" />
+              </div>
+              <div class="information">
+                <p>number</p>
+                <input type="text" name="number"/>
+              </div>
+              <div class="information">
+                <p>Address</p>
+                <input type="text" name="address" />
+              </div>
+            </li>
+            <div class="confirmation">
+              <h6>
+                Don't wanna reveal identity? Report about the incident
+                anonamously
+              </h6>
+              <input type="checkbox" />
+            </div>
+          </div>
+          <div class="terms">
+            <input type="checkbox" />
+            <p>I accept the terms and conditions</p>
+          </div>
+        </div>
+
+
+
+        <div class="submit">
+          <button type="submit" class="button">Submit</button>
+        </div>
+
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
